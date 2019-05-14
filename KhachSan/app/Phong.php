@@ -20,4 +20,10 @@ class Phong extends Model
     	//1 phong co 1 loai phong
     	return $this->belongsTo('App\Loaiphong','idloaiphong','id');
     }
+
+    public function khachhang()
+    {
+        //1 phong duoc thue boi 1 khach hang
+        return $this->hasMany('App\Khachhang','idphong','id');
+    }
 }

@@ -11,6 +11,7 @@ class Loaiphong extends Model
 
     public function phong()
     {
+    	//1 loai phong co nhieu Phong
     	return $this->hasMany('App\Phong','idloaiphong','id');
     }
 }

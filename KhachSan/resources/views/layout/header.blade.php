@@ -38,7 +38,7 @@
                             {{-- Kiem tra co dang nhap hay khong --}}
 
                                 @if(Auth::user())
-                                    <a><span class ="glyphicon glyphicon-user"></span> {{ Auth::user()->name }} </a>
+                                    <a href="nguoidung"><span class ="glyphicon glyphicon-user"></span> {{ Auth::user()->name }} </a>
                                     <a href="dangxuat">Đăng xuất</a>
                                 @else
                                     <a href="dangky">Đăng ký</a>
@@ -63,7 +63,7 @@
                 <nav class="classy-navbar justify-content-between" id="robertoNav">
 
                     <!-- Logo -->
-                    <a class="nav-brand" href="index.html">Ruby Hotel</a>
+                    <a class="nav-brand" href="trangchu">Ruby Hotel</a>
                     
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
@@ -93,7 +93,7 @@
 
                             <!-- Book Now -->
                             <div class="book-now-btn ml-3 ml-lg-5">
-                                <a href="#">Đặt ngay <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+                                <a href="datphong">Đặt phòng <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
                             </div>
                         </div>
                         <!-- Nav End -->

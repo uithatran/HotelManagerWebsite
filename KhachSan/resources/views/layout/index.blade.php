@@ -41,6 +41,8 @@
     <!-- Active -->
     <script src="khachhang_asset/js/default-assets/active.js"></script>
 
+    @yield('script')
+
 </body>
 
 </html>

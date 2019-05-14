@@ -13,7 +13,7 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i> ABC</a>
+                            <a href="admin/phong/danhsach"><i class="fa fa-dashboard fa-fw"></i> Ruby Hotel</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Quản lý phòng<span class="fa arrow"></span></a>
@@ -50,6 +50,19 @@
                                 </li>
                                 <li>
                                     <a href="admin/user/them">Thêm user</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fa fa-users fa-fw"></i> Quản lý khách hàng<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="admin/khachhang/danhsach">Danh sách khách hàng</a>
+                                </li>
+                                <li>
+                                    <a href="admin/user/them">Thêm khách hàng</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->

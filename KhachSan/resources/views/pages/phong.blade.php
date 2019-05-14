@@ -46,7 +46,7 @@
                             <span>/ Ngày</span>
                         </h4>
                         <div class="room-feature">
-                            <h6>Diện tích: <span>{{ $data->loaiphong->dientich }} ft</span></h6>
+                            <h6>Diện tích: <span>{{ $data->loaiphong->dientich }} m <sup>2</sup></span></h6>
                             <h6>Sức chứa: <span>{{ $data->loaiphong->succhua }} người tối đa</span></h6>
                             <h6>Số giường: <span>{{ $data->loaiphong->sogiuong }} giường</span></h6>
                             <h6>Dich vụ: <span>{{ $data->loaiphong->dichvu }}</span></h6>

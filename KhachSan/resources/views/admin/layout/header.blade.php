@@ -7,7 +7,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Khách sạn ABC</a>
+        <a class="navbar-brand" href="admin/phong/danhsach">Ruby Hotel</a>
     </div>
     <!-- /.navbar-header -->
 
@@ -21,9 +21,9 @@
                 {{-- Nếu tồn tại biến user --}}
                 @if(Auth::user())
     
-                    <li><i class="fa fa-user fa-fw"></i>{{ Auth::user()->name }}  
+                    <li><a href="admin/user/sua/{{ Auth::user()->id }}"><i class="fa fa-user fa-fw"></i>{{ Auth::user()->name }} </a> 
                     </li>
-                    <li><a href="admin/user/sua/{{ Auth::user()->id }}#"><i class="fa fa-gear fa-fw"></i> Thiết lập</a>
+                    <li><a href="admin/user/sua/{{ Auth::user()->id }}"><i class="fa fa-gear fa-fw"></i> Thiết lập</a>
                     </li>
                     <li class="divider"></li>
                     <li><a href="admin/logout"><i class="fa fa-sign-out fa-fw"></i> Đăng xuất</a>

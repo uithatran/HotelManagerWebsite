@@ -19,7 +19,7 @@
                         <th>Mã Phòng</th> 
                         <th>Loại</th>
                         <th>Giá</th>
-                        <th>Tình trạng</th>
+                        <th><center>Tình trạng(thông tin)</center></th>
                         <th>Dịch vụ</th>
                         <th>Xóa</th> 
                         <th>Sửa</th>
@@ -36,7 +36,7 @@
                             {{-- <th>{{ $ph->tinhtrang }}</th> --}}
                             <script>
                                 if({{ $ph->tinhtrang }} == 1){
-                                    document.write("<td> Đang thuê</td>")
+                                    document.write("<td> <a href='#'> Đang thuê</a></td>")
                                     document.write("<td class='center'> <a href='admin/phong/traphong'> Trả phòng</a></td>")
                                 }
                                 if({{ $ph->tinhtrang }} == 0){
