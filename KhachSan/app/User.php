@@ -6,7 +6,10 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
-{
+{   
+    //Lỗi đăng xuất user
+    public $remember_token=false;
+
     use Notifiable;
 
     /**
@@ -26,4 +29,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    //user comment những cái gì
+    public function comment()
+    {
+        //Người dùng comment nhiều comment khác nhau
+        return $this->hasMany('App\Comment','idUser','id');
+    }
 }
