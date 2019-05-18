@@ -6,7 +6,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Phòng
+                <h1 class="page-header">Tin tức
                     <small>Thêm</small>
                 </h1>
             </div>
@@ -27,40 +27,25 @@
                     </div>
                 @endif
                 {{-- action truyền 1 cái route, Nhận Route về truyền cho controller để phía controller lưu nó vào. --}}
-                <form action="admin/phong/them" method="POST">
+                <form action="admin/tintuc/them" method="POST" enctype="multipart/form-data">
                     {{-- Để form truyền dữ liệu lên máy chủ ->Token --}}
                     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                     <div class="form-group">
-                        <label>Tên phòng</label>
-                        <input class="form-control" name="tenphong" placeholder="Nhập tên phòng" />
+                        <label>Tiêu đề</label>
+                        <input class="form-control" name="tieudetintuc" placeholder="Nhập tên tiêu đề" />
                     </div>
                     <div class="form-group">
-                        <label>Loại phòng</label>
-                        <select class="form-control" name="idloaiphong" id="idloaiphong">
-                            <option value="1" selected="">A</option>
-                            <option value="2">B</option>
-                            <option value="3">C</option>
-                            <option value="4">D</option>
-                        </select>
+                        <label>Nội dung</label>
+                        <input class="form-control" name="noidungtintuc" placeholder="Nhập chức vụ" />
                     </div>
-
-                    <div class="form-group">
+{{--                     <div class="form-group">
                         <label>Hình ảnh</label>
-                        <input class="form-control" name="hinhanhphong" placeholder="Nhập URL hình ảnh" />
-                    </div>
-
+                        <input class="form-control" name="hinhanhtintuc" placeholder="Nhập chức vụ" />
+                    </div> --}}
                     <div class="form-group">
-                        <label>Trạng thái phòng</label>
-                        <select class="form-control" name="trangthai" id="trangthai" disabled="">
-                            <option value="0" selected="">trống</option>
-                            <option value="1">đang ở</option>
-                        </select>
+                        <label for="">Hình ảnh</label>
+                        <input type="file" class="form-control" name="hinhanhtintuc">
                     </div>
-                    <div class="form-group">
-                        <label>Chú thích</label>
-                        <textarea class="form-control" name="chuthich" id="chuthich" cols="3"></textarea>
-                    </div>
-                    
                     <button type="submit" class="btn btn-default">Thêm</button>
                     <button type="reset" class="btn btn-default">Làm mới</button>
                 </form>

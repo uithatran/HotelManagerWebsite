@@ -9,6 +9,7 @@ use App\Phong;
 use App\User;
 use App\Tintuc;
 use App\Khachhang;
+use App\Datphong;
 // public $remember_token=false;
 
 class PagesController extends Controller
@@ -182,5 +183,63 @@ class PagesController extends Controller
 	function getDatphong()
 	{
 		return view('pages.datphong');
+	}
+
+	function postDatphong(Request $request)
+	{
+		$this->validate($request,[
+            'tenkhachhang'=>'required',
+            'email'=>'required',
+            'sdt'=>'required',
+            'ngayden'=>'required',
+            'ngaydi'=>'required',
+            'loaiphong'=>'required',
+            'nguoilon'=>'required',
+            'treem'=>'required',
+            'cmnd'=>'required',
+            'tuoi'=>'required',
+            'quoctich'=>'required',
+        ],
+        [
+            'tenkhachhang.required'=>'Bạn chưa nhập tên',
+            'email.required'=>'Bạn chưa nhập email',
+            'sdt.required'=>'Bạn chưa nhập sdt',
+            'ngayden.required'=>'Bạn chưa nhập ngày đến',
+            'ngaydi.required'=>'Bạn chưa nhập ngày đi',
+            'loaiphong.required'=>'Bạn chưa nhập loại phòng',
+            'nguoilon.required'=>'Bạn chưa nhập số người lớn',
+            'treem.required'=>'Bạn chưa nhập số trẻ em',
+            'cmnd.required'=>'Bạn chưa nhập cmnd',
+            'tuoi.required'=>'Bạn chưa nhập email',
+            'quoctich.required'=>'Bạn chưa nhập quốc tịch',           
+        ]);
+
+        $datphong = new Datphong;
+        $datphong->tenkhachhang = $request->tenkhachhang;
+        $datphong->email = $request->email;
+        $datphong->sdt = $request->sdt;
+        $datphong->ngayden = $request->ngayden;
+        $datphong->ngaydi = $request->ngaydi;
+        $datphong->loaiphong = $request->loaiphong;
+        $datphong->nguoilon = $request->nguoilon;
+        $datphong->treem = $request->treem;
+        $datphong->cmnd = $request->cmnd;
+        $datphong->tuoi = $request->tuoi;
+        $datphong->quoctich = $request->quoctich;        
+
+        $datphong->save();
+
+        $khachhang = new Khachhang;
+        $khachhang->tenkh = $request->tenkhachhang;
+        $khachhang->email = $request->email;
+        $khachhang->cmnd = $request->cmnd;
+        $khachhang->quoctich = $request->quoctich;
+        $khachhang->tuoi = $request->tuoi;
+        $khachhang->sdt = $request->sdt;
+        $khachhang->idphong = 0;
+
+        $khachhang->save();
+
+        return redirect('datphong')->with('thongbao','Đặt phòng thành công.'); 
 	}
 }

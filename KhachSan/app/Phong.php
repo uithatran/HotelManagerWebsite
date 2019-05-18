@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Phong extends Model
 {
+    const CREATED_AT = 'name_of_created_at_column';
+    const UPDATED_AT = 'name_of_updated_at_column';
     //khai báo tên table
     protected $table = "Phong";
 
@@ -26,4 +28,6 @@ class Phong extends Model
         //1 phong duoc thue boi 1 khach hang
         return $this->hasMany('App\Khachhang','idphong','id');
     }
+
+    public $timestamps = false;
 }

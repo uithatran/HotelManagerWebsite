@@ -34,7 +34,7 @@ Route::get('/', function () {
 
 
 Route::get('thu1', function () {
-    return view('pages.datphong');
+    return view('admin.tintuc.them');
 });
 
 
@@ -58,8 +58,15 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 		Route::get('danhsach','PhongController@getDanhSach');
 		Route::get('them','PhongController@getThem');
 		Route::post('them','PhongController@postThem');
+
+		Route::get('xoa/{id}','PhongController@getXoa');
+
 		Route::get('datphong','PhongController@getDatphong');
-		Route::get('traphong','PhongController@getTraphong');
+		Route::post('datphong','PagesController@postDatphong');
+
+		Route::get('datphongtest','PhongController@getDatphongtest');
+		Route::post('datphongtest','PagesController@postDatphongtest');
+		// Route::get('traphong','PhongController@getTraphong');
 	});
  
 	Route::group(['prefix'=>'nhanvien'],function(){
@@ -87,11 +94,19 @@ Route::group(['prefix'=>'admin','middleware'=>'adminLogin'],function(){
 
 	Route::group(['prefix'=>'khachhang'],function(){
 		Route::get('danhsach','KhachhangController@getDanhSach');
+		Route::get('them','KhachhangController@getThem');
+		Route::post('them','KhachhangController@postThem');
 		// Route::get('them','UserController@getThem');
 		// Route::post('them','UserController@postThem');
 		// Route::get('sua/{id}','UserController@getSua');
 		// Route::post('sua/{id}','UserController@postSua');
 		// Route::get('xoa/{id}','UserController@getXoa');
+	});
+
+	Route::group(['prefix'=>'tintuc'],function(){
+		Route::get('danhsach','TintucController@getDanhsach');
+		Route::get('them','TintucController@getThem');
+		Route::post('them','TintucController@postThem');
 	});
  
 });
@@ -116,3 +131,4 @@ Route::get('nguoidung','PagesController@getNguoidung');
 Route::post('nguoidung','PagesController@postNguoidung');
 
 Route::get('datphong','PagesController@getDatphong');
+Route::post('datphong','PagesController@postDatphong');

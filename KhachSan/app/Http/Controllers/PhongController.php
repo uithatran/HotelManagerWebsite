@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Phong;
+use App\Datphong;
+use App\User;
 
 class PhongController extends Controller 
 {
@@ -23,12 +26,30 @@ class PhongController extends Controller
 
     public function postThem(Request $request)
     {
-        echo $request->tenphong;
-    }
+        // TEST THEM PHONG
+        // echo $request->tenphong;
+        $this->validate($request,
+            [
+                'tenphong'=>'required | min:3',
+            ],
+            [
+                'tenphong.required'=>'Bạn chưa nhập tên phòng',
+                'tenphong.min'=>'Tên phòng phải dài hơn 3 ký tự',
+            ]
+        );
 
-    public function getDatphong()
-    {
-        return view('admin.phong.datphong');
+        $phong = new Phong;
+        $phong->tenphong = $request->tenphong;
+        $phong->idloaiphong = $request->idloaiphong;
+        $phong->hinhanhphong = $request->hinhanhphong;
+        $phong->trangthai = 0;
+        $phong->chuthich = $request->chuthich;
+        $phong->idnhanvien = 1;
+        $phong->iddichvu = 1;
+
+        $phong->save();
+
+        return redirect('admin/phong/them')->with('thongbao','Thêm phòng thành công.');
     }
 
     public function getTraphong()
@@ -36,6 +57,21 @@ class PhongController extends Controller
         return view('admin.phong.traphong');
     }
 
+    public function getDatphong()
+    {
+        //Lay tat ca cac phong
+        $datphong = Datphong::all();
+        //truyen danh sach phong sang trang danh sach
+        return view('admin.phong.datphong',['datphong'=>$datphong]);
+    }
+
+    public function getXoa($id)
+    {
+        $phong = phong::find($id);
+        $phong->delete();
+
+        return redirect('admin/phong/danhsach')->with('thongbao','Bạn đã xóa thành công');
+    }
 
 /*
     //Request để nhận dữ liệu

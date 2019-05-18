@@ -12,6 +12,55 @@ class KhachhangController extends Controller
         $khachhang = Khachhang::all();
         return view('admin.khachhang.danhsach',['khachhang'=>$khachhang]);
     }
+
+    public function getThem()
+    {
+        return view('admin.khachhang.them');
+    }
+
+    public function postThem(Request $request)
+    {
+        $this->validate($request,
+            [
+                'hoten'=>'required|min:3',
+                'email' => 'required | email | unique:users,email',
+                'password'=>'required|min:3',
+                'sdt'=>'required',
+                'cmnd'=>'required',
+                'quoctich'=>'required',
+                'tuoi'=>'required',
+
+            ]
+            ,
+            [
+                'hoten.required'=> 'Bạn chưa nhập tên người dùng',
+                'hoten.min' => 'Tên người dùng phải có ít nhất 3 ký tự',
+
+                'email.required'=>'Bạn chưa nhập email',
+                'email.email'=>'Bạn chưa nhập đúng định dạng email',
+                'email.unique'=>'Email đã tồn tại',
+
+                'password.required'=>'Bạn chưa nhập mật khẩu',
+                'password.min'=>'Mật khẩu phải có ít nhất 3 ký tự',
+                'sdt.required'=>'Bạn chưa nhập mật khẩu',
+                'cmnd.required'=>'Bạn chưa nhập mật khẩu',
+                'cmnd.required'=>'Bạn chưa nhập mật khẩu',
+                'quoctich.required'=>'Bạn chưa nhập mật khẩu',
+            ]);
+
+            $khachhang = new Khachhang;
+            $khachhang->tenkh = $request->hoten;
+            $khachhang->email = $request->email;
+            $khachhang->password = $request->password;
+            $khachhang->sdt = $request->sdt;
+            $khachhang->cmnd = $request->cmnd;
+            $khachhang->quoctich = $request->quoctich;
+            $khachhang->tuoi = $request->tuoi;
+            
+            $khachhang->save();
+
+            return view('admin/khachhang/them')->with('Bạn đã thêm thành công.');
+    }
     //tao ham getdanhsach
     // public function getDanhSach()
     // {

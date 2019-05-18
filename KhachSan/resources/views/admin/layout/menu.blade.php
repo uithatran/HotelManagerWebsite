@@ -22,6 +22,9 @@
                                     <a href="admin/phong/danhsach">Danh sách phòng</a>
                                 </li>
                                 <li>
+                                    <a href="admin/phong/datphong">Danh sách đặt phòng</a>
+                                </li>
+                                <li>
                                     <a href="admin/phong/them">Thêm phòng</a>
                                 </li>
                             </ul>
@@ -56,17 +59,30 @@
                         </li>
 
                         <li>
-                            <a href="#"><i class="fa fa-users fa-fw"></i> Quản lý khách hàng<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-drupal fa-fw"></i> Quản lý khách hàng<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="admin/khachhang/danhsach">Danh sách khách hàng</a>
                                 </li>
                                 <li>
-                                    <a href="admin/user/them">Thêm khách hàng</a>
+                                    <a href="admin/khachhang/them">Thêm khách hàng</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+
+                        <li>
+                            <a href="#"><i class="fa fa-edit fa-fw"></i> Quản lý tin tức<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="admin/tintuc/danhsach">Danh sách tin tức</a>
+                                </li>
+                                <li>
+                                    <a href="admin/tintuc/them">Thêm tin tức</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>                        
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

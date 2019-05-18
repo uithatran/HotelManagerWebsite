@@ -12,7 +12,7 @@
                 </h1>
             </div>
             <!-- /.col-lg-12 -->
-            <table class="table table-striped table-bordered table-hover"{{--  id="dataTables-example" --}}>
+            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                 <thead>
                     <tr align="center">
                         <th>ID</th>
@@ -35,11 +35,11 @@
                             <td>{{ $ph->loaiphong->dongia }}</td>
                             {{-- <th>{{ $ph->tinhtrang }}</th> --}}
                             <script>
-                                if({{ $ph->tinhtrang }} == 1){
+                                if({{ $ph->trangthai }} == 1){
                                     document.write("<td> <a href='#'> Đang thuê</a></td>")
                                     document.write("<td class='center'> <a href='admin/phong/traphong'> Trả phòng</a></td>")
                                 }
-                                if({{ $ph->tinhtrang }} == 0){
+                                if({{ $ph->trangthai }} == 0){
                                     document.write("<td> Trống</td>")
                                     document.write("<td class='center'><span class='glyphicon glyphicon-plus-sign'></span><a href='admin/phong/datphong'> Thuê phòng</a></td>")
                                 }
@@ -47,7 +47,7 @@
                             <script>
                                 
                             </script>
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/phong/xoa"> Xóa</a></td>
+                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/phong/xoa/{{ $ph->id }}"> Xóa</a></td>
                             <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/phong/sua/{{ $ph->id }}">Sửa</a></td>
                         </tr>
                     @endforeach

@@ -26,6 +26,7 @@
                         <th>Cấp độ</th>
                         <th>Xóa</th>
                         <th>Sửa</th>
+                        <th>Ngày tạo</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -38,11 +39,12 @@
                             <td>{{ $u->email }}</td>
                             <td>
                                 @if($u->quyen == 1){{ "Admin" }}
-                                @else{{ "Thường" }}
+                                @else{{ "Khách hàng" }}
                                 @endif
                             </td>
                             <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/user/xoa/{{ $u->id }}"> Xóa</a></td>
                             <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/user/sua/{{ $u->id }}">Sửa</a></td>
+                            <td>{{ $u->created_at }}</td>
                         </tr>
                     @endforeach
                 </tbody>

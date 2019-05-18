@@ -129,7 +129,7 @@ class UserController extends Controller
 			'password'=>'required|min:3|max:32',
 		],
 		[
-			'main.required'=>'Bạn chưa nhập email',
+			'email.required'=>'Bạn chưa nhập email',
 			'password.required'=>'Bạn chưa nhập password',
 			'password.min'=>'password không được nhỏ hơn 3 ký tự',
 			'password.max'=>'password không được lớn hơn 32 ký tự',
@@ -137,7 +137,7 @@ class UserController extends Controller
 		// Thêm thư viện Auth
 		if(Auth::attempt(['email'=>$request->email,'password'=>$request->password]))
 		{
-			return redirect('admin/nhanvien/danhsach');
+			return redirect('admin/phong/danhsach');
 		}
 		else
 		{
@@ -149,8 +149,8 @@ class UserController extends Controller
 	public function getDangXuatAdmin()
 	{
 		Auth::logout();
-		return view('admin.login');
-		// return redirect('admin/dangnhap');
+		// return view('admin.login');
+		return redirect('admin/dangnhap');
 	}
 }
 
