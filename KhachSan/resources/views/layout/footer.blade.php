@@ -12,7 +12,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-5 text-right">
-                    <a href="#" class="btn roberto-btn mb-50">Đặt ngay</a>
+                    <a href="datphong" class="btn roberto-btn mb-50">Đặt ngay</a>
                 </div>
             </div>
         </div>

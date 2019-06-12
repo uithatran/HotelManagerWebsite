@@ -9,11 +9,11 @@
         <div class="row h-100 align-items-center">
             <div class="col-12">
                 <div class="breadcrumb-content text-center">
-                    <h2 class="page-title">About Us</h2>
+                    <h2 class="page-title">Về chúng tôi</h2>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                            <li class="breadcrumb-item"><a href="trangchu">Trang chủ</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Về chúng tôi</li>
                         </ol>
                     </nav>
                 </div>
@@ -35,12 +35,13 @@
             <div class="col-12 col-lg-6">
                 <!-- Section Heading -->
                 <div class="section-heading wow fadeInUp" data-wow-delay="300ms">
-                    <h6>Testimonials</h6>
-                    <h2>20 Years Of Experience</h2>
+                    <h6></h6>
+                    <h2>20 Năm kinh nghiệm</h2>
                 </div>
                 <div class="about-content mb-100 wow fadeInUp" data-wow-delay="500ms">
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum. Sed ut perspiciatis unde omnis iste.</p>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum. Sed ut perspiciatis unde omnis iste. Lorem Ipsum available.</p>
+                    <p>Khách Sạn Đây Rồi được xây dựng với khát khao cung cấp những sản phẩm du lịch, nghỉ dưỡng và giải trí đẳng cấp dành cho nhiều đối tượng khách hàng. Đặc biệt, Khách Sạn Đây Rồi cung cấp gói sản phẩm quản lý du lịch dành cho những Doanh Nhân bận rộn có nhu cầu di chuyển dày đặt cùng với nhu cầu lưu trú trong và ngoài nước. Với đội ngũ nhân viên kinh nghiệm hơn 20 năm trong ngành dịch vụ khách hàng và lữ hành, Khách Sạn Đây Rồi cam kết mang đến những trải nghiệm dịch vụ du lịch trọn gói đa dạng và vượt trội cho khách hàng.</p>
+                    <p>Đồng hành với Khách Sạn Đây Rồi là những Đối Tác Chiến Lược, Hệ Thống Lữ hành, Du Lịch, Khách Sạn và Các Khu Nghỉ Dưỡng đẳng cấp trong và ngoài nước. Với tiêu chí mang đến những trải nghiệm như mơ, Khách Sạn Đây Rồi cam kết mang đến sự hài lòng và xứng đáng nhất với mức giá tốt nhất cho khách hàng. Khách Sạn Đây Rồi luôn đặt khách hang làm trung tâm, lắng nghe những yêu cầu của khách hàng để từng bước tối ưu sản phẩm, cải thiện dịch vụ nhằm mang lại sự hài lòng trọn vẹn cho khách hàng. Sự hài lòng của khách hàng và sự quay trở lại sử dụng dịch vụ là phần thưởng xứng đáng cho những nổ lực không ngừng của Khách Sạn Đây Rồi.</p>
+                    <p>Chất với khẩu hiệu “Cho Những Kỳ Nghỉ Như Mơ”.</p>
                     <img src="khachhang_asset/img//core-img/signature.png" alt="">
                 </div>
             </div>
@@ -56,11 +57,11 @@
             <div class="col-12 col-md-6">
                 <!-- Section Heading -->
                 <div class="section-heading text-center white wow fadeInUp" data-wow-delay="100ms">
-                    <h6>Ultimate Solutions</h6>
-                    <h2>Our Hotel &amp; Room</h2>
+                    <h6>Giải pháp tối ưu</h6>
+                    <h2>Khách sạn &amp; Phòng</h2>
                 </div>
                 <div class="video-content-area mt-100 wow fadeInUp" data-wow-delay="500ms">
-                    <a href="https://www.youtube.com/watch?v=s4iHtwEyzWU" class="video-play-btn"><i class="fa fa-play"></i></a>
+                    <a href="https://www.youtube.com/watch?v=nH7gHCO3oik" class="video-play-btn"><i class="fa fa-play"></i></a>
                 </div>
             </div>
         </div>
@@ -87,7 +88,7 @@
                 <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="300ms">
                     <img src="khachhang_asset/img//bg-img/21.jpg" alt="">
                     <div class="service-title d-flex align-items-center justify-content-center">
-                        <h5>Restaurant &amp; Bar</h5>
+                        <h5>Nhà hàng</h5>
                     </div>
                 </div>
             </div>
@@ -96,7 +97,7 @@
                 <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="500ms">
                     <img src="khachhang_asset/img//bg-img/22.jpg" alt="">
                     <div class="service-title d-flex align-items-center justify-content-center">
-                        <h5>Spa &amp; Fitness</h5>
+                        <h5>Spa &amp; Trung tâm GYM</h5>
                     </div>
                 </div>
             </div>
@@ -105,7 +106,7 @@
                 <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="700ms">
                     <img src="khachhang_asset/img//bg-img/23.jpg" alt="">
                     <div class="service-title d-flex align-items-center justify-content-center">
-                        <h5>Pool &amp; Party</h5>
+                        <h5>Hồ bơi &amp; Tiệc</h5>
                     </div>
                 </div>
             </div>

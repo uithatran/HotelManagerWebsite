@@ -22,7 +22,7 @@
                                     <a href="admin/phong/danhsach">Danh sách phòng</a>
                                 </li>
                                 <li>
-                                    <a href="admin/phong/datphong">Danh sách đặt phòng</a>
+                                    <a href="admin/phong/danhsachdatphong">Danh sách đặt phòng</a>
                                 </li>
                                 <li>
                                     <a href="admin/phong/them">Thêm phòng</a>
@@ -39,30 +39,19 @@
                                 <li>
                                     <a href="admin/nhanvien/them">Thêm nhân viên</a>
                                 </li>
-                                <li>
-                                    <a href="admin/nhanvien/sua/1">Sửa nhân viên</a>
-                                </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
-                        <li>
-                            <a href="#"><i class="fa fa-users fa-fw"></i> Quản lý user<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="admin/user/danhsach">Danh sách user</a>
-                                </li>
-                                <li>
-                                    <a href="admin/user/them">Thêm user</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
+
 
                         <li>
                             <a href="#"><i class="fa fa-drupal fa-fw"></i> Quản lý khách hàng<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="admin/khachhang/danhsach">Danh sách khách hàng</a>
+                                </li>
+                                <li>
+                                    <a href="admin/phanhoi/danhsach">Danh sách phản hồi</a>
                                 </li>
                                 <li>
                                     <a href="admin/khachhang/them">Thêm khách hàng</a>
@@ -82,7 +71,21 @@
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
-                        </li>                        
+                        </li>
+
+                        <li>
+                            <a href="#"><i class="fa fa-users fa-fw"></i> Quản lý user<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="admin/user/danhsach">Danh sách user</a>
+                                </li>
+                                <li>
+                                    <a href="admin/user/them">Thêm user</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

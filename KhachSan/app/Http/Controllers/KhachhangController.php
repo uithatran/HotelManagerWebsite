@@ -56,10 +56,23 @@ class KhachhangController extends Controller
             $khachhang->cmnd = $request->cmnd;
             $khachhang->quoctich = $request->quoctich;
             $khachhang->tuoi = $request->tuoi;
-            
+
             $khachhang->save();
 
             return view('admin/khachhang/them')->with('Bạn đã thêm thành công.');
+    }
+
+    public function getThongtincanhan($id)
+    {
+        $khachhang = Khachhang::find($id);
+        return view('admin/khachhang/thongtincanhan',['khachhang'=>$khachhang]);
+    }
+
+    public function getXoa($id)
+    {
+        $khachhang = Khachhang::find($id);
+        $khachhang->delete();
+        return redirect('admin/khachhang/danhsach')->with('thongbao','Bạn đã xóa thành công');
     }
     //tao ham getdanhsach
     // public function getDanhSach()

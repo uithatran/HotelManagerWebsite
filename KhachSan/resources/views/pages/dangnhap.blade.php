@@ -26,16 +26,16 @@
                             {{ session('thongbao') }}
                         </div>
                     @endif
-                    
+
                     <form action="dangnhap" method="post">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        
+
                         <div>
                             <label>Email</label>
-                            <input type="email" class="form-control" placeholder="Email" name="email" 
+                            <input type="email" class="form-control" placeholder="Email" name="email"
                             >
                         </div>
-                        <br>    
+                        <br>
                         <div>
                             <label>Mật khẩu</label>
                             <input type="password" class="form-control" name="password">

@@ -9,12 +9,12 @@
             <div class="col-12">
                 <div class="breadcrumb-content text-center">
                     <h2 class="page-title"></h2>
-                    <nav aria-label="breadcrumb">
+{{--                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center">
                             <li class="breadcrumb-item"><a href="index.html">Trang chủ</a></li>
                             <li class="breadcrumb-item active" aria-current="page">tin tức</li>
                         </ol>
-                    </nav>
+                    </nav> --}}
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
-				
+
 
 				@foreach($tintuc as $tt)
 
@@ -35,27 +35,29 @@
                 <div class="single-blog-post d-flex align-items-center mb-50 wow fadeInUp" data-wow-delay="100ms">
                     <!-- Post Thumbnail -->
                     <div class="post-thumbnail">
-                        <a href="#"><img src="{{ $tt->hinhanhtintuc }}" alt=""></a>
+                        <a href="#"><img src="images/tintuc/{{ $tt->hinhanhtintuc }}" alt=""></a>
                     </div>
                     <!-- Post Content -->
                     <div class="post-content">
                         <!-- Post Meta -->
                         <div class="post-meta">
-                            <a href="#" class="post-author">Jan 02, 2019</a>
+                            <a href="#" class="post-author">{{$tt->created_at}}</a>
                             <a href="#" class="post-tutorial"></a>
                         </div>
                         <!-- Post Title -->
-                        <a href="#" class="post-title">{{ $tt->tieudetintuc }}</a>
+                        <a href="{{$tt->linktintuc}}" class="post-title" target="_blank">{{ $tt->tieudetintuc }}</a>
                         <p>{{ $tt->noidungtintuc }}</p>
-                        <a href="#" class="btn continue-btn">Read More</a>
+                        <a href="{{$tt->linktintuc}}" class="btn continue-btn" target="_blank">Read More</a>
                     </div>
                 </div>
 
                 @endforeach
 
+                {!! $tintuc->links() !!}
 
 
-                <!-- Pagination -->
+
+               {{--  <! Pagination >
                 <nav class="roberto-pagination wow fadeInUp mb-100" data-wow-delay="600ms">
                     <ul class="pagination">
                         <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -63,7 +65,7 @@
                         <li class="page-item"><a class="page-link" href="#">3</a></li>
                         <li class="page-item"><a class="page-link" href="#">Next <i class="fa fa-angle-right"></i></a></li>
                     </ul>
-                </nav>
+                </nav> --}}
             </div>
 
             <div class="col-12 col-sm-8 col-md-6 col-lg-4">
@@ -72,12 +74,12 @@
                     <!-- Newsletter -->
                     <div class="single-widget-area mb-100">
                         <div class="newsletter-form">
-                            <h5>Newsletter</h5>
-                            <p>Subscribe our newsletter gor get notification new updates.</p>
-                            
+                            <h5>Bản tin</h5>
+                            <p>Theo dõi bản tin của chúng tôi để nhận thông báo cập nhật mới.</p>
+
                             <form action="#" method="post">
-                                <input type="email" name="nl-email" id="nlEmail" class="form-control" placeholder="Enter your email...">
-                                <button type="submit" class="btn roberto-btn w-100">Subscribe</button>
+                                <input type="email" name="nl-email" id="nlEmail" class="form-control" placeholder="Nhập email của bạn...">
+                                <button type="submit" class="btn roberto-btn w-100">Theo dõi</button>
                             </form>
                         </div>
                     </div>
@@ -85,74 +87,23 @@
                     <!-- Recent Post -->
                     <div class="single-widget-area mb-100">
                         <h4 class="widget-title mb-30">Recent News</h4>
-
-                        <!-- Single Recent Post -->
-                        <div class="single-recent-post d-flex">
-                            <!-- Thumb -->
-                            <div class="post-thumb">
-                                <a href="single-blog.html"><img src="khachhang_asset/img//bg-img/29.jpg" alt=""></a>
-                            </div>
-                            <!-- Content -->
-                            <div class="post-content">
-                                <!-- Post Meta -->
-                                <div class="post-meta">
-                                    <a href="#" class="post-author">Jan 29, 2019</a>
-                                    <a href="#" class="post-tutorial">Event</a>
+                        @foreach($recentNew as $rn)
+                            <!-- Single Recent Post -->
+                            <div class="single-recent-post d-flex">
+                                <!-- Thumb -->
+                                <div class="post-thumb">
+                                    <a href="{{$rn->linktintuc}}" target="_blank" ><img src="images/tintuc/{{ $rn->hinhanhtintuc }}" alt=""></a>
                                 </div>
-                                <a href="single-blog.html" class="post-title">Proven Techniques Help You Herbal Breast</a>
-                            </div>
-                        </div>
-
-                        <!-- Single Recent Post -->
-                        <div class="single-recent-post d-flex">
-                            <!-- Thumb -->
-                            <div class="post-thumb">
-                                <a href="single-blog.html"><img src="khachhang_asset/img//bg-img/30.jpg" alt=""></a>
-                            </div>
-                            <!-- Content -->
-                            <div class="post-content">
-                                <!-- Post Meta -->
-                                <div class="post-meta">
-                                    <a href="#" class="post-author">Jan 29, 2019</a>
-                                    <a href="#" class="post-tutorial">Event</a>
+                                <!-- Content -->
+                                <div class="post-content">
+                                    <!-- Post Meta -->
+                                    <div class="post-meta">
+                                        <a href="#" class="post-author">{{$rn->created_at}}</a>
+                                    </div>
+                                    <a href="{{$rn->linktintuc}}" target="_blank" href="single-blog.html" class="post-title">{{$rn->tieudetintuc}}</a>
                                 </div>
-                                <a href="single-blog.html" class="post-title">Cooking On A George Foreman Grill</a>
                             </div>
-                        </div>
-
-                        <!-- Single Recent Post -->
-                        <div class="single-recent-post d-flex">
-                            <!-- Thumb -->
-                            <div class="post-thumb">
-                                <a href="single-blog.html"><img src="khachhang_asset/img//bg-img/31.jpg" alt=""></a>
-                            </div>
-                            <!-- Content -->
-                            <div class="post-content">
-                                <!-- Post Meta -->
-                                <div class="post-meta">
-                                    <a href="#" class="post-author">Jan 29, 2019</a>
-                                    <a href="#" class="post-tutorial">Event</a>
-                                </div>
-                                <a href="single-blog.html" class="post-title">Selecting The Right Hotel</a>
-                            </div>
-                        </div>
-
-                        <!-- Single Recent Post -->
-                        <div class="single-recent-post d-flex">
-                            <!-- Thumb -->
-                            <div class="post-thumb">
-                                <a href="single-blog.html"><img src="khachhang_asset/img//bg-img/32.jpg" alt=""></a>
-                            </div>
-                            <!-- Content -->
-                            <div class="post-content">
-                                <!-- Post Meta -->
-                                <div class="post-meta">
-                                    <a href="#" class="post-author">Jan 29, 2019</a>
-                                    <a href="#" class="post-tutorial">Event</a>
-                                </div>
-                                <a href="single-blog.html" class="post-title">Comment Importance Of Human Life</a>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
 
                     <!-- Popular Tags -->

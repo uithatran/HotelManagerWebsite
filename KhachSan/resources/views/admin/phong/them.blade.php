@@ -27,7 +27,7 @@
                     </div>
                 @endif
                 {{-- action truyền 1 cái route, Nhận Route về truyền cho controller để phía controller lưu nó vào. --}}
-                <form action="admin/phong/them" method="POST">
+                <form action="admin/phong/them" method="POST" enctype="multipart/form-data">
                     {{-- Để form truyền dữ liệu lên máy chủ ->Token --}}
                     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
                     <div class="form-group">
@@ -46,7 +46,7 @@
 
                     <div class="form-group">
                         <label>Hình ảnh</label>
-                        <input class="form-control" name="hinhanhphong" placeholder="Nhập URL hình ảnh" />
+                        <input type="file" class="form-control" name="hinhanhphong"/>
                     </div>
 
                     <div class="form-group">
@@ -56,11 +56,6 @@
                             <option value="1">đang ở</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label>Chú thích</label>
-                        <textarea class="form-control" name="chuthich" id="chuthich" cols="3"></textarea>
-                    </div>
-                    
                     <button type="submit" class="btn btn-default">Thêm</button>
                     <button type="reset" class="btn btn-default">Làm mới</button>
                 </form>

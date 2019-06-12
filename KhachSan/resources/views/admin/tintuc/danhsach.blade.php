@@ -20,10 +20,10 @@
                     </div>
                 @endif
 
-                <table class="table table-striped table-bordered table-hover">
+                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr align="center">
-                            <th>Mã tin tức </th>
+                            <th>Mã </th>
                             <th>Tiêu đề </th>
                             <th>Nội dung</th>
                             <th>Hình ảnh</th>
@@ -35,13 +35,15 @@
                     <tbody>
                         @foreach($tintuc as $tt)
                             <tr class="odd gradeX" align="center">
-                                <td>{{ $tt->matintuc }}</td>
+                                <td>{{ $tt->id }}</td>
                                 <td>{{ $tt->tieudetintuc }}</td>
                                 <td>{{ $tt->noidungtintuc }}</td>
-                                <td><img src="{{ $tt->hinhanhtintuc }}" alt="Hình ảnh bị lỗi" width="200" height="100"></td>
-                                <td>{{ $tt->create_at }}</td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/nhanvien/xoa/{{-- {{ $nv->id }} --}}"> Xóa</a></td>
-                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/nhanvien/sua/{{-- {{ $nv->id }} --}}">Sửa</a></td>
+                                <td><img src="images/tintuc/{{ $tt->hinhanhtintuc }}" alt="Hình ảnh bị lỗi" width="200" height="100"></td>
+                                <td>{{ $tt->created_at }}</td>
+                                <td class="center">
+                                    <i class="fa fa-trash-o  fa-fw"></i><a href="admin/tintuc/xoa/{{ $tt->id }}" class="btn btn-danger"> Xóa</a>
+                                </td>
+                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/tintuc/sua/{{ $tt->id }}">Sửa</a></td>
                             </tr>
                         @endforeach
 
@@ -54,4 +56,7 @@
     </div>
     <!-- /#page-wrapper -->
 
+
+
 @endsection
+

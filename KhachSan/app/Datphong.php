@@ -10,5 +10,11 @@ class Datphong extends Model
 	const UPDATED_AT = 'name_of_updated_at_column';
     //khai báo tên table
     protected $table = "Datphong";
+
+    //Do datphong co 1 khach hang
+    public function khachhang()
+    {
+    	return $this->hasMany('App\Khachhang','iddatphong','id');
+    }
     public $timestamps = false;
 }

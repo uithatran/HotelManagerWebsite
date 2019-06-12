@@ -27,7 +27,7 @@ class UserController extends Controller
 
 		$this->validate($request,
 			[
-				//tao dieu kien 
+				//tao dieu kien
 				'name' => 'required|min:3',
 				'email' => 'required|email|unique:users,email',
 				'password' => 'required|min:3|max:32',
@@ -48,7 +48,6 @@ class UserController extends Controller
 				'password.max'=>'Mật khẩu chỉ được tối đã 32 ký tự',
 				'passwordagain.required'=>'Bạn chưa nhập lại mật khẩu',
 				'passwordagain.same'=>'Mật khẩu nhập lại chưa khớp',
-				
 			]);
 
 		$user = new User;

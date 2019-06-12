@@ -17,5 +17,11 @@ class Khachhang extends Model
     	return $this->belongsTo('App\Phong','idphong','id');
     }
 
+    public function datphong()
+    {
+        return $this->belongsTo('App\datphong','iddatphong','id');
+    }
+
+
     public $timestamps = false;
 }

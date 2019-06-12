@@ -33,7 +33,7 @@
                 <div class="single-room-area d-flex align-items-center mb-50 wow fadeInUp" data-wow-delay="100ms">
                     <!-- Room Thumbnail -->
                     <div class="room-thumbnail">
-                        <img src="{{ $data->hinhanhphong }}" alt="">
+                        <img src="images/phong/{{ $data->hinhanhphong }}" alt="">
                     </div>
                     <!-- Room Content -->
                     <div class="room-content">
@@ -57,10 +57,12 @@
 
                 @endforeach
 
+                {!! $dulieuphong->links() !!}
 
 
 
-                <!-- Pagination -->
+
+                {{-- <!-- Pagination -->
                 <nav class="roberto-pagination wow fadeInUp mb-100" data-wow-delay="1000ms">
                     <ul class="pagination">
                         <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -68,7 +70,7 @@
                         <li class="page-item"><a class="page-link" href="#">3</a></li>
                         <li class="page-item"><a class="page-link" href="#">Next <i class="fa fa-angle-right"></i></a></li>
                     </ul>
-                </nav>
+                </nav> --}}
             </div>
 
             <div class="col-12 col-lg-4">
@@ -98,8 +100,6 @@
                                         <option value="02">02</option>
                                         <option value="03">03</option>
                                         <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
                                     </select>
                                 </div>
                                 <div class="col-6">
@@ -109,8 +109,6 @@
                                         <option value="02">02</option>
                                         <option value="03">03</option>
                                         <option value="04">04</option>
-                                        <option value="05">05</option>
-                                        <option value="06">06</option>
                                     </select>
                                 </div>
                             </div>
@@ -126,7 +124,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn roberto-btn w-100">Đặt phòng</button>
+                            <a href="datphong"><button type="button" class="btn roberto-btn w-100">Đặt phòng</button></a>
                         </div>
                     </form>
                 </div>

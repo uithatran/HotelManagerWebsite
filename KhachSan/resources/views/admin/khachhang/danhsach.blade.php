@@ -27,31 +27,31 @@
                             <th>Tên khách hàng</th>
                             <th>Email</th>
                             <th>Phòng</th>
-                            <th>CMND</th>
-                            <th>Quốc tịch</th>
-                            <th>Tuổi</th>
-                            <th>SĐT</th>
-                            <th>Xóa</th>
-                            <th>Sửa</th>
+                            <th>Trang thái</th>
+{{--                             <th>Xóa</th> --}}
+
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($khachhang as $kh)
                             <tr class="odd gradeX" align="center">
                                 <td>{{ $kh->id }}</td>
-                                <td>{{ $kh->tenkh }}</td>
+                                <td> <a href="admin/khachhang/thongtincanhan/{{ $kh->id }}">{{ $kh->tenkh }}</a> </td>
                                 <td>{{ $kh->email }}</td>
-                                @if($kh->idphong=='NULL')
+
+                                @if($kh->idphong==0)
                                     <td>NULL</td>
                                 @else
                                     <td>{{ $kh->phong->tenphong }}</td>
                                 @endif
-                                <td>{{ $kh->cmnd }}</td>
-                                <td>{{ $kh->quoctich }}</td>
-                                <td>{{ $kh->tuoi }}</td>
-                                <td>{{ $kh->sdt }}</td>
-                                <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/nhanvien/xoa/{{-- {{ $nv->id }} --}}"> Xóa</a></td>
-                                <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/nhanvien/sua/{{-- {{ $nv->id }} --}}">Sửa</a></td>
+
+                                @if($kh->trangthai == 1)
+                                    <td>Đang ở</td>
+                                @else
+                                    <td>Không ở</td>
+                                @endif
+
+{{--                                 <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/khachhang/xoa/{{ $kh->id }}"> Xóa</a></td> --}}
                             </tr>
                         @endforeach
 

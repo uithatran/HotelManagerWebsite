@@ -29,7 +29,7 @@
 
                     <form method="post" action="dangky">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        
+
                         {{-- Họ tên--}}
                         <div>
                             <label>Họ tên</label>

@@ -26,7 +26,7 @@ class Phong extends Model
     public function khachhang()
     {
         //1 phong duoc thue boi 1 khach hang
-        return $this->hasMany('App\Khachhang','idphong','id');
+        return $this->hasOne('App\Khachhang','idphong','id');
     }
 
     public $timestamps = false;
